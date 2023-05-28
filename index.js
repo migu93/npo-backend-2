@@ -7,7 +7,12 @@ const vacancyRouter = require('./Routers/vacancyRouter')
 const app = express();
 const cors = require('cors');
 
-app.use(cors());
+app.use(cors({
+    origin: 'http://localhost:3000', // Укажите здесь домен, с которого вы хотите разрешить запросы
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // HTTP методы, которые вы хотите разрешить
+    credentials: true, // Разрешить кросс-доменные cookies
+}));
+
 app.use(express.json());
 app.use("/auth", authRouter)
 app.use("/vacancy", vacancyRouter)

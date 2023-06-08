@@ -7,12 +7,18 @@ const ProjectSchema = new Schema({
         {
             type: { type: String },
             text: Schema.Types.Mixed,
-            url: String,
+            imageData: {
+                data: Buffer,
+                contentType: String
+            },
             alt: String
         }
     ],
-    imageUrl: String,
-    date: String
+    image: {
+        data: Buffer,
+        contentType: String
+    },
+    date: { type: Date, default: Date.now }
 });
 
 module.exports = model('Project', ProjectSchema);

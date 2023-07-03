@@ -10,8 +10,8 @@ const cors = require('cors');
 
 app.use(cors());
 app.use(express.json());
-app.use("/auth", authRouter)
-app.use("/vacancy", vacancyRouter)
+app.use("/auth", authRouter);
+app.use("/vacancy", vacancyRouter);
 app.use('/api', feedbackRouter);
 app.use('/project', projectRouter);
 

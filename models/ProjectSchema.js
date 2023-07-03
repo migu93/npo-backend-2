@@ -2,12 +2,12 @@ const { Schema, model } = require('mongoose');
 
 const ProjectSchema = new Schema({
     title: String,
-    description: String,
+        description: String,
     content: [
         {
             type: { type: String },
             text: Schema.Types.Mixed,
-            imageData: {
+            image: {
                 data: Buffer,
                 contentType: String
             },
@@ -18,7 +18,8 @@ const ProjectSchema = new Schema({
         data: Buffer,
         contentType: String
     },
-    date: { type: Date, default: Date.now }
+    date: Date
 });
+
 
 module.exports = model('Project', ProjectSchema);

@@ -7,7 +7,7 @@ const feedbackRouter = require('./Routers/feedbackRouter')
 const projectRouter = require('./Routers/projectRouter');
 const app = express();
 const cors = require('cors');
-
+// коммит
 app.use(cors());
 app.use(express.json());
 app.use("/auth", authRouter);

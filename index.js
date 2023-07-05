@@ -7,10 +7,7 @@ const feedbackRouter = require('./Routers/feedbackRouter')
 const projectRouter = require('./Routers/projectRouter');
 const app = express();
 const cors = require('cors');
-app.use(cors({
-    origin: '*', // Set the origin to your frontend application's URL
-    // Add any additional necessary CORS configuration options here
-}));
+app.use(cors());
 app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/vacancy", vacancyRouter);

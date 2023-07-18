@@ -5,15 +5,18 @@ const authRouter = require('./Routers/authRouter')
 const vacancyRouter = require('./Routers/vacancyRouter')
 const feedbackRouter = require('./Routers/feedbackRouter')
 const projectRouter = require('./Routers/projectRouter');
+const emailRouter = require('./Routers/emailRouter')
+const cors = require("cors");
+
 const app = express();
-const cors = require('cors');
 app.use(cors());
+
 app.use(express.json());
 app.use("/auth", authRouter);
 app.use("/vacancy", vacancyRouter);
 app.use('/api', feedbackRouter);
 app.use('/project', projectRouter);
-
+app.use('/email', emailRouter)
 
 const start = async () => {
     try {

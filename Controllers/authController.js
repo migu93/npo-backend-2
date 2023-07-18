@@ -9,7 +9,7 @@ const generateAccsessToken = (id, roles) => {
         id,
         roles
     }
-    return jwt.sign(payLoad, secret, {expiresIn: "24h"})
+    return jwt.sign(payLoad, secret, {expiresIn: '24h'})
 }
 class authController {
     async registration(req, res) {
@@ -70,5 +70,7 @@ class authController {
 
         }
     }
+
+
 }
 module.exports = new authController()

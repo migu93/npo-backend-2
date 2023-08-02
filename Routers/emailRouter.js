@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const emailController = require('../controllers/emailController');
+const emailController = require('../Controllers/emailController');
 
 // POST /emails - создание новой записи
 router.post('/create-email', emailController.createEmail);
